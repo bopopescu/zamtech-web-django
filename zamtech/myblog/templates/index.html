@@ -1,0 +1,76 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--django templates-->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'myblog/css/main.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'myblog/css/header.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'myblog/css/banner.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'myblog/css/content.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'myblog/css/footer.css' %}" type="text/css">
+        <link rel="shortcut icon" href="{% static 'myblog/pics/logo_zamtech.png'  %}">
+        <!--html templates
+        <link rel="stylesheet" href="/static/css/main.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/header.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/banner.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/content.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/footer.css" type="text/css">
+        <link rel="shortcut icon" href="/static/pics/logo_zamtech.png">
+        -->
+        <title>HOME-ZAM_TECHNOLOGY</title>
+
+    </head>
+
+    <body>
+        <header>
+          <a href="#" id="logo">ZAM TECHNOLOGY</a>
+          <nav>
+            <a href="#" class="mobile-nav">&#9776</a>
+            <ul class="topnav">
+                <div class="dropdown">
+                    <button class="dropbtn">myblog 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="{% url 'myblog:posting' %}">posting</a><br>
+                      <a href="#">curhat mas</a>
+                    </div>
+                  </div> 
+            </ul>
+            <ul class=navigation1>
+              <ul>
+                <li><a href="{% url 'accounts:signin' %}"><img src="{% static 'myblog/pics/login.png' %}" height="25" width="*"></a></li>
+              </ul>
+            </ul>
+          </nav>
+        </header>
+        <div id="banner">
+          <img src="{% static 'myblog/pics/logo_zamtech.png' %}" class="logo" height="150" width="150">
+          <h1>we understand your needs</h1>
+          {% block banner %}
+          <!--banner content will appear here-->
+          {% endblock %}
+        </div>
+        <div id="content">
+          {% block content %}
+          <!--contents will appear here-->
+          {% endblock %}
+        </div>
+        <footer>
+          <div class="contact">
+            <img src="{% static 'myblog/pics/logo_zamtech.png' %}" height="100" width="100">
+            <ul>
+              <li>Bangunrejo, Yogyakarta</li>
+              <li>+628993011870</li>
+              <li>zamtechcorp@gmail.com</li>
+            </ul>
+          </div>
+          <div class="teamup">
+            <h1>Have a project idea?<br>lets team up!!!</h1>
+            </form>
+          </div>
+        </footer>
+    </body>
+</html>

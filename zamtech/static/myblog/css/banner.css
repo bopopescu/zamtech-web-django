@@ -1,0 +1,17 @@
+#banner{
+  background-image: url(../pics/banner2.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  text-align: center;
+}
+.logo{
+  margin-top: 70px;
+}
+h1{
+  color: white;
+  text-shadow: 100px;
+  font-size: 50px;
+  font-family: sans-serif;
+}

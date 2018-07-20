@@ -1,0 +1,17 @@
+footer{
+  background: grey;
+  overflow: auto;
+}
+footer .contact{
+  float: left;
+  width: 300px;
+  margin: 20px;
+}
+footer .teamup{
+  float: left;
+  margin: 20px;
+}
+footer .teamup h1{
+  text-align: center;
+  width: 600px
+}
