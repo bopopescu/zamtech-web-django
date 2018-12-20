@@ -7,5 +7,6 @@ app_name = 'myblog'
 urlpatterns = [
     path('', views.index, name='index'), #main homepage template
     path('accounts', include('accounts.urls', namespace='signout-accounts')), #jumps to other app(accounts)
-    path('posting', views.posting, name='posting') #posting url
+    path('posting', views.posting, name='posting'), #posting url
+    path('infokuliah', views.infokuliah, name='infokuliah'), #info kuliah s1 dteti
 ]

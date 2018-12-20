@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% csrf_token %}
+    <form method="GET", action="{% url 'myblog:infokuliah' %}">
+        <button type="submit">info kuliah</button>
+    </form>
+{% endblock %}
